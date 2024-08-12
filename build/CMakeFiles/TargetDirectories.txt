@@ -1,5 +1,3 @@
-/home/fang/ffmpeg_learn/build/CMakeFiles/oper_yuv.dir
-/home/fang/ffmpeg_learn/build/CMakeFiles/rgbToBmp.dir
-/home/fang/ffmpeg_learn/build/CMakeFiles/rgbToYuv420p.dir
+/home/fang/ffmpeg_learn/build/CMakeFiles/operPcm.dir
 /home/fang/ffmpeg_learn/build/CMakeFiles/edit_cache.dir
 /home/fang/ffmpeg_learn/build/CMakeFiles/rebuild_cache.dir

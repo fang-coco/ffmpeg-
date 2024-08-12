@@ -117,115 +117,41 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named oper_yuv
+# Target rules for targets named operPcm
 
 # Build rule for target.
-oper_yuv: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 oper_yuv
-.PHONY : oper_yuv
+operPcm: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 operPcm
+.PHONY : operPcm
 
 # fast build rule for target.
-oper_yuv/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/oper_yuv.dir/build.make CMakeFiles/oper_yuv.dir/build
-.PHONY : oper_yuv/fast
+operPcm/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/operPcm.dir/build.make CMakeFiles/operPcm.dir/build
+.PHONY : operPcm/fast
 
-#=============================================================================
-# Target rules for targets named rgbToBmp
-
-# Build rule for target.
-rgbToBmp: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 rgbToBmp
-.PHONY : rgbToBmp
-
-# fast build rule for target.
-rgbToBmp/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rgbToBmp.dir/build.make CMakeFiles/rgbToBmp.dir/build
-.PHONY : rgbToBmp/fast
-
-#=============================================================================
-# Target rules for targets named rgbToYuv420p
-
-# Build rule for target.
-rgbToYuv420p: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 rgbToYuv420p
-.PHONY : rgbToYuv420p
-
-# fast build rule for target.
-rgbToYuv420p/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rgbToYuv420p.dir/build.make CMakeFiles/rgbToYuv420p.dir/build
-.PHONY : rgbToYuv420p/fast
-
-operate_yuv.o: operate_yuv.cc.o
-.PHONY : operate_yuv.o
+operate_pcm.o: operate_pcm.cc.o
+.PHONY : operate_pcm.o
 
 # target to build an object file
-operate_yuv.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/oper_yuv.dir/build.make CMakeFiles/oper_yuv.dir/operate_yuv.cc.o
-.PHONY : operate_yuv.cc.o
+operate_pcm.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/operPcm.dir/build.make CMakeFiles/operPcm.dir/operate_pcm.cc.o
+.PHONY : operate_pcm.cc.o
 
-operate_yuv.i: operate_yuv.cc.i
-.PHONY : operate_yuv.i
-
-# target to preprocess a source file
-operate_yuv.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/oper_yuv.dir/build.make CMakeFiles/oper_yuv.dir/operate_yuv.cc.i
-.PHONY : operate_yuv.cc.i
-
-operate_yuv.s: operate_yuv.cc.s
-.PHONY : operate_yuv.s
-
-# target to generate assembly for a file
-operate_yuv.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/oper_yuv.dir/build.make CMakeFiles/oper_yuv.dir/operate_yuv.cc.s
-.PHONY : operate_yuv.cc.s
-
-rgb24_to_bmp.o: rgb24_to_bmp.cc.o
-.PHONY : rgb24_to_bmp.o
-
-# target to build an object file
-rgb24_to_bmp.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rgbToBmp.dir/build.make CMakeFiles/rgbToBmp.dir/rgb24_to_bmp.cc.o
-.PHONY : rgb24_to_bmp.cc.o
-
-rgb24_to_bmp.i: rgb24_to_bmp.cc.i
-.PHONY : rgb24_to_bmp.i
+operate_pcm.i: operate_pcm.cc.i
+.PHONY : operate_pcm.i
 
 # target to preprocess a source file
-rgb24_to_bmp.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rgbToBmp.dir/build.make CMakeFiles/rgbToBmp.dir/rgb24_to_bmp.cc.i
-.PHONY : rgb24_to_bmp.cc.i
+operate_pcm.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/operPcm.dir/build.make CMakeFiles/operPcm.dir/operate_pcm.cc.i
+.PHONY : operate_pcm.cc.i
 
-rgb24_to_bmp.s: rgb24_to_bmp.cc.s
-.PHONY : rgb24_to_bmp.s
-
-# target to generate assembly for a file
-rgb24_to_bmp.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rgbToBmp.dir/build.make CMakeFiles/rgbToBmp.dir/rgb24_to_bmp.cc.s
-.PHONY : rgb24_to_bmp.cc.s
-
-rgb24_to_yuv420p.o: rgb24_to_yuv420p.cc.o
-.PHONY : rgb24_to_yuv420p.o
-
-# target to build an object file
-rgb24_to_yuv420p.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rgbToYuv420p.dir/build.make CMakeFiles/rgbToYuv420p.dir/rgb24_to_yuv420p.cc.o
-.PHONY : rgb24_to_yuv420p.cc.o
-
-rgb24_to_yuv420p.i: rgb24_to_yuv420p.cc.i
-.PHONY : rgb24_to_yuv420p.i
-
-# target to preprocess a source file
-rgb24_to_yuv420p.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rgbToYuv420p.dir/build.make CMakeFiles/rgbToYuv420p.dir/rgb24_to_yuv420p.cc.i
-.PHONY : rgb24_to_yuv420p.cc.i
-
-rgb24_to_yuv420p.s: rgb24_to_yuv420p.cc.s
-.PHONY : rgb24_to_yuv420p.s
+operate_pcm.s: operate_pcm.cc.s
+.PHONY : operate_pcm.s
 
 # target to generate assembly for a file
-rgb24_to_yuv420p.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rgbToYuv420p.dir/build.make CMakeFiles/rgbToYuv420p.dir/rgb24_to_yuv420p.cc.s
-.PHONY : rgb24_to_yuv420p.cc.s
+operate_pcm.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/operPcm.dir/build.make CMakeFiles/operPcm.dir/operate_pcm.cc.s
+.PHONY : operate_pcm.cc.s
 
 # Help Target
 help:
@@ -235,18 +161,10 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... oper_yuv"
-	@echo "... rgbToBmp"
-	@echo "... rgbToYuv420p"
-	@echo "... operate_yuv.o"
-	@echo "... operate_yuv.i"
-	@echo "... operate_yuv.s"
-	@echo "... rgb24_to_bmp.o"
-	@echo "... rgb24_to_bmp.i"
-	@echo "... rgb24_to_bmp.s"
-	@echo "... rgb24_to_yuv420p.o"
-	@echo "... rgb24_to_yuv420p.i"
-	@echo "... rgb24_to_yuv420p.s"
+	@echo "... operPcm"
+	@echo "... operate_pcm.o"
+	@echo "... operate_pcm.i"
+	@echo "... operate_pcm.s"
 .PHONY : help
 
 

@@ -63,9 +63,7 @@ CMAKE_BINARY_DIR = /home/fang/ffmpeg_learn/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/oper_yuv.dir/all
-all: CMakeFiles/rgbToBmp.dir/all
-all: CMakeFiles/rgbToYuv420p.dir/all
+all: CMakeFiles/operPcm.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -73,88 +71,34 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/oper_yuv.dir/clean
-clean: CMakeFiles/rgbToBmp.dir/clean
-clean: CMakeFiles/rgbToYuv420p.dir/clean
+clean: CMakeFiles/operPcm.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/oper_yuv.dir
+# Target rules for target CMakeFiles/operPcm.dir
 
 # All Build rule for target.
-CMakeFiles/oper_yuv.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/oper_yuv.dir/build.make CMakeFiles/oper_yuv.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/oper_yuv.dir/build.make CMakeFiles/oper_yuv.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/fang/ffmpeg_learn/build/CMakeFiles --progress-num=1,2 "Built target oper_yuv"
-.PHONY : CMakeFiles/oper_yuv.dir/all
+CMakeFiles/operPcm.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/operPcm.dir/build.make CMakeFiles/operPcm.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/operPcm.dir/build.make CMakeFiles/operPcm.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/fang/ffmpeg_learn/build/CMakeFiles --progress-num=1,2 "Built target operPcm"
+.PHONY : CMakeFiles/operPcm.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/oper_yuv.dir/rule: cmake_check_build_system
+CMakeFiles/operPcm.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/fang/ffmpeg_learn/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/oper_yuv.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/operPcm.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/fang/ffmpeg_learn/build/CMakeFiles 0
-.PHONY : CMakeFiles/oper_yuv.dir/rule
+.PHONY : CMakeFiles/operPcm.dir/rule
 
 # Convenience name for target.
-oper_yuv: CMakeFiles/oper_yuv.dir/rule
-.PHONY : oper_yuv
+operPcm: CMakeFiles/operPcm.dir/rule
+.PHONY : operPcm
 
 # clean rule for target.
-CMakeFiles/oper_yuv.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/oper_yuv.dir/build.make CMakeFiles/oper_yuv.dir/clean
-.PHONY : CMakeFiles/oper_yuv.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/rgbToBmp.dir
-
-# All Build rule for target.
-CMakeFiles/rgbToBmp.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rgbToBmp.dir/build.make CMakeFiles/rgbToBmp.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rgbToBmp.dir/build.make CMakeFiles/rgbToBmp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/fang/ffmpeg_learn/build/CMakeFiles --progress-num=3,4 "Built target rgbToBmp"
-.PHONY : CMakeFiles/rgbToBmp.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/rgbToBmp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fang/ffmpeg_learn/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/rgbToBmp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fang/ffmpeg_learn/build/CMakeFiles 0
-.PHONY : CMakeFiles/rgbToBmp.dir/rule
-
-# Convenience name for target.
-rgbToBmp: CMakeFiles/rgbToBmp.dir/rule
-.PHONY : rgbToBmp
-
-# clean rule for target.
-CMakeFiles/rgbToBmp.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rgbToBmp.dir/build.make CMakeFiles/rgbToBmp.dir/clean
-.PHONY : CMakeFiles/rgbToBmp.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/rgbToYuv420p.dir
-
-# All Build rule for target.
-CMakeFiles/rgbToYuv420p.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rgbToYuv420p.dir/build.make CMakeFiles/rgbToYuv420p.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rgbToYuv420p.dir/build.make CMakeFiles/rgbToYuv420p.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/fang/ffmpeg_learn/build/CMakeFiles --progress-num=5,6 "Built target rgbToYuv420p"
-.PHONY : CMakeFiles/rgbToYuv420p.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/rgbToYuv420p.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fang/ffmpeg_learn/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/rgbToYuv420p.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fang/ffmpeg_learn/build/CMakeFiles 0
-.PHONY : CMakeFiles/rgbToYuv420p.dir/rule
-
-# Convenience name for target.
-rgbToYuv420p: CMakeFiles/rgbToYuv420p.dir/rule
-.PHONY : rgbToYuv420p
-
-# clean rule for target.
-CMakeFiles/rgbToYuv420p.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rgbToYuv420p.dir/build.make CMakeFiles/rgbToYuv420p.dir/clean
-.PHONY : CMakeFiles/rgbToYuv420p.dir/clean
+CMakeFiles/operPcm.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/operPcm.dir/build.make CMakeFiles/operPcm.dir/clean
+.PHONY : CMakeFiles/operPcm.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

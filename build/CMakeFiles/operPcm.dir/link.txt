@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/operPcm.dir/operate_pcm.cc.o -o operPcm   -L/usr/local/lib 

@@ -43,7 +43,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/oper_yuv.dir/DependInfo.cmake"
-  "CMakeFiles/rgbToBmp.dir/DependInfo.cmake"
-  "CMakeFiles/rgbToYuv420p.dir/DependInfo.cmake"
+  "CMakeFiles/operPcm.dir/DependInfo.cmake"
   )

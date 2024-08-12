@@ -3,6 +3,12 @@
 #include <cstring>
 #include <math.h>
 
+/*
+    reference: 
+        https://xhunmon.github.io/VABlog/RTMP/1-yuv.html
+        https://blog.csdn.net/leixiaohua1020/article/details/50534150
+*/
+
 // 分离y,u,v数据 yuv420p
 int simplest_yuv420p_split(char *yuv_file, char *y_file, char *u_file, char *v_file, int width, int height) {
     FILE *fp_yuv = fopen(yuv_file, "rb+");

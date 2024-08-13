@@ -13,33 +13,33 @@
 #pragma pack(push, 1)
 typedef struct tagBITMAPFILEHEADER
 {
-    unsigned short int bfType;        /* 位图文件的类型， 必须为"BM" */
-    unsigned int bfSize;         /* 文件大小， 以字节为单位 */
+    unsigned short int bfType;      /* 位图文件的类型， 必须为"BM" */
+    unsigned int bfSize;            /* 文件大小， 以字节为单位 */
     unsigned short int bfReserved1; /* 保留字， 必须为0 */
     unsigned short int bfReserved2; /* ... */
-    unsigned int bfOffBits;      /* 文件头到数据的偏移量， 以字节为单位 */
-} BITMAPFILEHEADER ;
+    unsigned int bfOffBits;         /* 文件头到数据的偏移量， 以字节为单位 */
+} BITMAPFILEHEADER;
 #pragma pack(pop)
 
 typedef struct tagBITMAPINFOHEADER
 {
-    int biSize;                  /* 本结构所占用的字节数, 字节为单位 */
-    int biWidth;                  /* 位图的宽度，以像素为单位 */
-    int biHeight;                  /* 位图的高度，以像素为单位 */
-    short int biplPlanes;          /* 位图的平面数， 必须为1 */
-    short int biBitCount;          /* 颜色深度， 每个像素所需要的位数 */
-    int biCompression;      /* 位图的压缩方式 */
-    int biSizeImage;              /* 位图的大小， 以字节为单位 */
+    int biSize;           /* 本结构所占用的字节数, 字节为单位 */
+    int biWidth;          /* 位图的宽度，以像素为单位 */
+    int biHeight;         /* 位图的高度，以像素为单位 */
+    short int biplPlanes; /* 位图的平面数， 必须为1 */
+    short int biBitCount; /* 颜色深度， 每个像素所需要的位数 */
+    int biCompression;    /* 位图的压缩方式 */
+    int biSizeImage;      /* 位图的大小， 以字节为单位 */
     int biXPelsPerMeter;  /* 位图水平分辨率，每米像素数 */
     int biYPelsPerMeter;  /* 位图垂直分辨率，每米像素数 */
-    int biClrUsed;                /* 位图实际使用的颜色表中的颜色数 */
-    int biClrImportant;          /* 位图显示过程中重要的颜色数 */
+    int biClrUsed;        /* 位图实际使用的颜色表中的颜色数 */
+    int biClrImportant;   /* 位图显示过程中重要的颜色数 */
 } BITMAPINFOHEADER;
 
 int simple_rgb24_to_bmp(const char *rgb24_file, const char *bmp_file, int width, int height)
 {
 
-    FILE *fp_rgb24 = fopen(rgb24_file, "rb");    
+    FILE *fp_rgb24 = fopen(rgb24_file, "rb");
     if (fp_rgb24 == NULL)
     {
         printf("open rgb24 file failed\n");
@@ -84,7 +84,8 @@ int simple_rgb24_to_bmp(const char *rgb24_file, const char *bmp_file, int width,
     fwrite(&bih, 1, sizeof(BITMAPINFOHEADER), fp_bmp);
 
     // 交换r和b
-    for (int i = 0; i < bits * 3; i += 3) {
+    for (int i = 0; i < bits * 3; i += 3)
+    {
         unsigned char tmp = p_rgb24[i];
         p_rgb24[i] = p_rgb24[i + 2];
         p_rgb24[i + 2] = tmp;
@@ -92,10 +93,12 @@ int simple_rgb24_to_bmp(const char *rgb24_file, const char *bmp_file, int width,
 
     /* 因为bmp存储方式为小端存储，所以需要颠倒像素数据, 不然是镜像的 */
     // 颠倒像素数据
-    for (int y = 0; y < height / 2; ++y) {
+    for (int y = 0; y < height / 2; ++y)
+    {
         unsigned char *row_start = p_rgb24 + y * width * 3;
         unsigned char *row_end = p_rgb24 + (height - 1 - y) * width * 3;
-        for (int x = 0; x < width * 3; ++x) {
+        for (int x = 0; x < width * 3; ++x)
+        {
             unsigned char tmp = row_start[x];
             row_start[x] = row_end[x];
             row_end[x] = tmp;
@@ -108,7 +111,7 @@ int simple_rgb24_to_bmp(const char *rgb24_file, const char *bmp_file, int width,
     return 0;
 }
 
-int main() {
+int main()
+{
     simple_rgb24_to_bmp("../res/longmao_rgb24.rgb", "../res/longmao.bmp", 1680, 1050);
 }
-

@@ -54,7 +54,7 @@ Planar 格式适用于：
 #define RGB_TO_YUV_U(r, g, b) (-0.169 * r - 0.331 * g + 0.500 * b + 128)
 #define RGB_TO_YUV_V(r, g, b) (0.500 * r - 0.419 * g - 0.081 * b + 128)
 #define CLIP_VALUE(x) (((x) < 0) ? 0 : (((x) > 255) ? 255 : (x)))
-int simple_rgb_to_yuv420p(const  char *rgb, const  char *yuv, int width, int height)
+int simple_rgb_to_yuv420p(const char *rgb, const char *yuv, int width, int height)
 {
 
     FILE *fp_yuv = fopen(yuv, "wb+");
@@ -71,10 +71,10 @@ int simple_rgb_to_yuv420p(const  char *rgb, const  char *yuv, int width, int hei
         return -1;
     }
 
-    int bits = width * height ;
+    int bits = width * height;
 
-    unsigned char * rgb_buf = (unsigned char *)malloc(bits * 3);
-    unsigned char * yuv_buf = (unsigned char *)malloc(bits * 3 / 2);
+    unsigned char *rgb_buf = (unsigned char *)malloc(bits * 3);
+    unsigned char *yuv_buf = (unsigned char *)malloc(bits * 3 / 2);
 
     if (rgb_buf == NULL || yuv_buf == NULL)
     {
@@ -84,20 +84,25 @@ int simple_rgb_to_yuv420p(const  char *rgb, const  char *yuv, int width, int hei
 
     fread(rgb_buf, 1, bits * 3, fp_rgb);
 
-    unsigned char * y_buf = yuv_buf;
-    unsigned char * u_buf = yuv_buf + bits;
-    unsigned char * v_buf = yuv_buf + bits * 5 / 4;
+    unsigned char *y_buf = yuv_buf;
+    unsigned char *u_buf = yuv_buf + bits;
+    unsigned char *v_buf = yuv_buf + bits * 5 / 4;
     unsigned char r, g, b;
-    for (int h = 0; h < height; h++) {
-        for (int w = 0; w < width; w++) {
+    for (int h = 0; h < height; h++)
+    {
+        for (int w = 0; w < width; w++)
+        {
             int index = (h * width + w) * 3;
-            r = rgb_buf[index * 3]    ; 
-            g = rgb_buf[index * 3 + 1]; 
-            b = rgb_buf[index * 3 + 2]; 
+            r = rgb_buf[index * 3];
+            g = rgb_buf[index * 3 + 1];
+            b = rgb_buf[index * 3 + 2];
             *(y_buf++) = CLIP_VALUE(RGB_TO_YUV_Y(r, g, b));
-            if (h % 2 == 0 && w % 2 == 0) {
+            if (h % 2 == 0 && w % 2 == 0)
+            {
                 *(u_buf++) = CLIP_VALUE(RGB_TO_YUV_U(r, g, b));
-            } else if (h % 2 == 0) {
+            }
+            else if (h % 2 == 0)
+            {
                 *(v_buf++) = CLIP_VALUE(RGB_TO_YUV_V(r, g, b));
             }
         }
@@ -111,6 +116,7 @@ int simple_rgb_to_yuv420p(const  char *rgb, const  char *yuv, int width, int hei
     return 0;
 }
 
-int main() {
+int main()
+{
     simple_rgb_to_yuv420p("../res/longmao_rgb24.rgb", "../res/longmao_yuv420pB.yuv", 1680, 1050);
 }

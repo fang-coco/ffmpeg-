@@ -1,3 +1,4 @@
 /home/fang/ffmpeg_learn/build/CMakeFiles/operPcm.dir
+/home/fang/ffmpeg_learn/build/CMakeFiles/pcmToWav.dir
 /home/fang/ffmpeg_learn/build/CMakeFiles/edit_cache.dir
 /home/fang/ffmpeg_learn/build/CMakeFiles/rebuild_cache.dir

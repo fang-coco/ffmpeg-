@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/pcmToWav.dir/pcm_to_wav.cc.o -o pcmToWav   -L/usr/local/lib 

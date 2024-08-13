@@ -23,5 +23,6 @@ set(FFMPEG_LIBS
 # add_executable(rgbToBmp rgb24_to_bmp.cc)
 # add_executable(rgbToYuv420p rgb24_to_yuv420p.cc)
 add_executable(operPcm operate_pcm.cc)
+add_executable(pcmToWav pcm_to_wav.cc)
 
 # target_link_libraries(dfv ${FFMPEG_LIBS})

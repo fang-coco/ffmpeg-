@@ -129,6 +129,19 @@ operPcm/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/operPcm.dir/build.make CMakeFiles/operPcm.dir/build
 .PHONY : operPcm/fast
 
+#=============================================================================
+# Target rules for targets named pcmToWav
+
+# Build rule for target.
+pcmToWav: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pcmToWav
+.PHONY : pcmToWav
+
+# fast build rule for target.
+pcmToWav/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pcmToWav.dir/build.make CMakeFiles/pcmToWav.dir/build
+.PHONY : pcmToWav/fast
+
 operate_pcm.o: operate_pcm.cc.o
 .PHONY : operate_pcm.o
 
@@ -153,6 +166,30 @@ operate_pcm.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/operPcm.dir/build.make CMakeFiles/operPcm.dir/operate_pcm.cc.s
 .PHONY : operate_pcm.cc.s
 
+pcm_to_wav.o: pcm_to_wav.cc.o
+.PHONY : pcm_to_wav.o
+
+# target to build an object file
+pcm_to_wav.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pcmToWav.dir/build.make CMakeFiles/pcmToWav.dir/pcm_to_wav.cc.o
+.PHONY : pcm_to_wav.cc.o
+
+pcm_to_wav.i: pcm_to_wav.cc.i
+.PHONY : pcm_to_wav.i
+
+# target to preprocess a source file
+pcm_to_wav.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pcmToWav.dir/build.make CMakeFiles/pcmToWav.dir/pcm_to_wav.cc.i
+.PHONY : pcm_to_wav.cc.i
+
+pcm_to_wav.s: pcm_to_wav.cc.s
+.PHONY : pcm_to_wav.s
+
+# target to generate assembly for a file
+pcm_to_wav.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pcmToWav.dir/build.make CMakeFiles/pcmToWav.dir/pcm_to_wav.cc.s
+.PHONY : pcm_to_wav.cc.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -162,9 +199,13 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... operPcm"
+	@echo "... pcmToWav"
 	@echo "... operate_pcm.o"
 	@echo "... operate_pcm.i"
 	@echo "... operate_pcm.s"
+	@echo "... pcm_to_wav.o"
+	@echo "... pcm_to_wav.i"
+	@echo "... pcm_to_wav.s"
 .PHONY : help
 
 
